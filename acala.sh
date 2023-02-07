@@ -1,15 +1,13 @@
 #!/bin/bash
 
-CHAIN=${1}
-BASE_PATH=${2}
+BASE_PATH=${1}
 
-source $(dirname "$0")/packages.sh
+source ${BASE_PATH}/zscript/packages.sh
 
-${cwd}/${chain}-data/${chain} \
-acala \
---base-path ${PWD}/${CHAIN}-data \
+${BASE_PATH}/acala-data/acala \
+--base-path ${BASE_PATH}/acala-data \
 --chain=acala \
---name "${CHAIN}-para" \
+--name "acala-para" \
 --pruning=archive \
 --ws-external \
 --rpc-external \
@@ -20,6 +18,6 @@ acala \
 --execution=wasm \
 -- \
 --chain=kusama \
---name "${chain}-relay &> ${cwd}/${chain}-data/${chain}.log"
+--name "acala-relay &> ${BASE_PATH}/acala-data/acala.log"
 
-source $(dirname "$0")/bodhi.sh
+source ${BASE_PATH}/zscript/bodhi.sh ${BASE_PATH}

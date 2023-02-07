@@ -2,7 +2,7 @@
 
 echo "installing linux and rust dependencies..."
 sudo apt remove rush
-sudo apt install build-essential git clang libclang-dev pkg-config libssl-dev cmake
+sudo apt install build-essential git clang libclang-dev pkg-config libssl-dev cmake -y
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
 echo "installing node.js..."
