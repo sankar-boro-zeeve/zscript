@@ -1,32 +1,29 @@
 #!/bin/bash
 
-CHAIN=${1}
-PWD=$(pwd)
-# cd "${CHAIN}-data"
-echo ${CHAIN} ${PWD}
-# wget https://github.com/PureStake/moonbeam/releases/download/v0.29.0/moonbeam
-# cd ..
-echo "Running moonbeam... ${CHAIN}"
+BASE_PATH=${1}
 
-# ${cwd}/${chain}-data/${chain} \
-moonbeam \
---port 30333 \
---rpc-port 9933 \
---ws-port 9944 \
---execution wasm \
---wasm-execution compiled \
---state-pruning=archive \
---trie-cache-size 0 \
---db-cache 6000 \
---base-path ${PWD}/${CHAIN}-data \
---chain ${CHAIN} \
---name "${CHAIN}-full-node" \
---unsafe-rpc-external \
---unsafe-ws-external \
---rpc-cors all \
--- \
---port 30334 \
---rpc-port 9934 \
---ws-port 9945 \
---execution wasm \
---name "${chain}-full-node (Embedded Relay)"
+# wget https://github.com/PureStake/moonbeam/releases/download/v0.29.0/moonbeam
+# mv moonbeam "${BASE_PATH}/moonbeam-data/"
+# cd ..
+echo ${BASE_PATH}
+# ${BASE_PATH}/moonbeam-data/moonbeam \
+# --port 30333 \
+# --rpc-port 9933 \
+# --ws-port 9944 \
+# --execution wasm \
+# --wasm-execution compiled \
+# --state-pruning=archive \
+# --trie-cache-size 0 \
+# --db-cache 6000 \
+# --base-path ${BASE_PATH}/moonbeam-data \
+# --chain moonbeam \
+# --name "moonbeam-para" \
+# --unsafe-rpc-external \
+# --unsafe-ws-external \
+# --rpc-cors all \
+# -- \
+# --port 30334 \
+# --rpc-port 9934 \
+# --ws-port 9945 \
+# --execution wasm \
+# --name "moonbeam-relay"

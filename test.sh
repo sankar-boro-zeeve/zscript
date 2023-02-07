@@ -1,5 +1,6 @@
 #!/bin/bash
 
-Y="moonbeam.sh"
-X=$(dirname "$0")/${Y}
-echo "${X}"
+BASE_PATH=$(pwd)
+cd acala-data
+echo "${BASE_PATH}"
+echo "$(pwd)"

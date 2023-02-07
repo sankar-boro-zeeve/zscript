@@ -1,6 +1,7 @@
 #!/bin/bash
 
 ARGS=$#
+BASE_PATH=$(pwd)
 
 function init() {
     if [[ ${ARGS} -ne 2 ]]
@@ -21,13 +22,11 @@ do
     esac
 done
 
-# CUR_DIR=$(pwd)
-
 CHAIN_DIR="${chain}-data"
 rm -rf $CHAIN_DIR
 mkdir $CHAIN_DIR;
 chmod 777 $CHAIN_DIR
 
-source $(dirname "$0")/${chain}.sh ${chain}
+source $(dirname "$0")/${chain}.sh ${BASE_PATH}
 
 
