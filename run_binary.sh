@@ -1,0 +1,21 @@
+"${cwd}/${chain}-data/${chain} \
+--port 30333 \
+--rpc-port 9933 \
+--ws-port 9944 \
+--execution wasm \
+--wasm-execution compiled \
+--state-pruning=archive \
+--trie-cache-size 0 \
+--db-cache 6000 \
+--base-path ${cwd}/${chain}-data \
+--chain ${chain} \
+--name '${chain}-full-node' \
+--unsafe-rpc-external \
+--unsafe-ws-external \
+--rpc-cors="all" \
+-- \
+--port 30334 \
+--rpc-port 9934 \
+--ws-port 9945 \
+--execution wasm \
+--name='${chain}-full-node (Embedded Relay)'"
