@@ -4,6 +4,15 @@ BASE_PATH=${1}
 
 source ${BASE_PATH}/zscript/packages.sh
 
+echo "cloning acala repo..."
+
+git clone https://github.com/AcalaNetwork/Acala.git
+mv Acala acala
+cd acala && git config --global submodule.recurse true
+make init && cargo build --release --features with-acala-runtime
+cd ..
+cp acala/target/production/acala ./acala-data/
+
 ${BASE_PATH}/acala-data/acala \
 --base-path ${BASE_PATH}/acala-data \
 --chain=acala \
