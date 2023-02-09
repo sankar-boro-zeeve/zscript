@@ -8,8 +8,10 @@ echo "cloning acala repo..."
 
 git clone https://github.com/AcalaNetwork/Acala.git
 mv Acala acala
-cd acala && git config --global submodule.recurse true
-make init && cargo build --release --features with-acala-runtime
+sudo chmod 777 acala
+cd acala && sudo git config --global submodule.recurse true
+sudo git config --global --add safe.directory /home/ubuntu/zeeve/acala
+sudo git submodule update --init --recursive && cargo build --release --features with-acala-runtime
 cd ..
 cp acala/target/production/acala ./acala-data/
 
