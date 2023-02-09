@@ -7,7 +7,7 @@ source ${BASE_PATH}/zscript/packages.sh
 echo "cloning acala repo..."
 
 sudo git clone https://github.com/AcalaNetwork/Acala.git
-mv Acala acala
+sudo mv Acala acala
 sudo chmod 777 acala
 cd acala && sudo git config --global submodule.recurse true
 sudo git config --global --add safe.directory /home/ubuntu/zeeve/acala
