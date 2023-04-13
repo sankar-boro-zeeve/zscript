@@ -33,19 +33,19 @@ generic_chain() {
 }
 
 build_binary() {
-if [ $build_name == "acala" ]
+if [ $1 == "acala" ]
 then
   acala_chain acala
-elif [ $build_name == "mandala" ]
+elif [ $1 == "mandala" ]
 then
   acala_chain mandala
-elif [ $build_name == "karura" ]
+elif [ $1 == "karura" ]
 then
   acala_chain karura
-elif [ $build_name == "generic" ]
+elif [ $1 == "generic" ]
 then
   generic_chain
 else
-	echo "nothing found."
+	generic_chain
 fi
 }

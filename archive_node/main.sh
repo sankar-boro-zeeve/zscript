@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source archive_node_help.sh
+source help.sh
 source get_args.sh
 source install.sh
 
@@ -20,11 +20,11 @@ then
 fi
 
 
-install_rust
-install_linux_packages
+# install_rust
+# install_linux_packages
 repo_setup
-build_binary
-# ./binary.sh -g https://github.com/PureStake/moonbeam -n moonbeam -r polkadot -p moonbeam -u sankar
+build_binary ${name}
+# ./main.sh -g https://github.com/PureStake/moonbeam -n moonbeam -r polkadot -p moonbeam -u sankar
 
 DATA_DIR=${name}-data
 mkdir ${DATA_DIR}
