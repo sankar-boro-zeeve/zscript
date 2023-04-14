@@ -21,10 +21,10 @@ then
 fi
 
 
-install_rust
-install_linux_packages
-repo_setup
-build_binary ${name}
+# install_rust
+# install_linux_packages
+# repo_setup
+# build_binary ${name}
 run_binary
 
 # ./main.sh -g https://github.com/PureStake/moonbeam -n moonbeam -r polkadot -p moonbeam -u sankar

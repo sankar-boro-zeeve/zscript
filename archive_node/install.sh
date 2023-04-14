@@ -26,11 +26,14 @@ cd $HOME/$repo_dir && git config --global submodule.recurse true
 }
 
 acala_chain() {
-	make init && cargo build --release --features with-$1-runtime
+	git submodule update --init --recursive
+  cargo build --release --features with-$1-runtime
+  cp ./target/release/acala ~/$1
 }
 
 generic_chain() {
   cargo build --release
+  cp ./target/release/$1
 }
 
 build_binary() {
@@ -45,8 +48,8 @@ then
   acala_chain karura
 elif [ $1 == "generic" ]
 then
-  generic_chain
+  generic_chain $1
 else
-	generic_chain
+	generic_chain $1
 fi
 }
