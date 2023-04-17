@@ -20,6 +20,8 @@ then
 	exit 1
 fi
 
+cd $HOME/zeeve
+echo "Current directory: $HOME/zeeve"
 sudo apt update -y && sudo apt upgrade -y
 install_rust
 install_linux_packages

@@ -2,10 +2,12 @@
 
 run_binary() {
 DATA_DIR_NAME=${name}-data
-DATA_DIR=$HOME/zeeve/${DATA_DIR_NAME}
-mkdir $DATA_DIR
+cd $HOME/zeeve
+mkdir -p $DATA_DIR_NAME
 
-$HOME/${name} \
+DATA_DIR=$HOME/zeeve/$DATA_DIR_NAME
+
+./${name} \
 --port 30333 \
 --rpc-port 9933 \
 --ws-port 9944 \

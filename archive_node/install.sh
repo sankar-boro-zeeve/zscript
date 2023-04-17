@@ -14,7 +14,6 @@ sudo apt-get install -y git clang curl libssl-dev llvm libudev-dev protobuf-comp
 }
 
 repo_setup() {
-cd $HOME
 # Clone the specified Git repository
 sudo git clone $git_link --depth 1
 # Get the name of the repository directory
@@ -22,7 +21,7 @@ repo_dir=$(echo $git_link | awk -F/ '{print $NF}' | sed 's/.git$//')
 # Change ownership of the repository directory to the current user
 sudo chown -R $USER:$USER $repo_dir
 # Configure Git to recursively clone submodules
-cd $HOME/$repo_dir && git config --global submodule.recurse true
+cd $repo_dir && git config --global submodule.recurse true
 }
 
 acala_chain() {
