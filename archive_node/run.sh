@@ -2,10 +2,11 @@
 
 run_binary() {
 DATA_DIR_NAME=${name}-data
-cd $HOME/zeeve
-mkdir -p $DATA_DIR_NAME
+ZEEVE_DIR=$HOME/zeeve
+DATA_DIR=$ZEEVE_DIR/$DATA_DIR_NAME
 
-DATA_DIR=$HOME/zeeve/$DATA_DIR_NAME
+cd $ZEEVE_DIR
+mkdir -p $DATA_DIR_NAME
 
 ./${name} \
 --port 30333 \
