@@ -28,12 +28,12 @@ cd $HOME/$repo_dir && git config --global submodule.recurse true
 acala_chain() {
 	git submodule update --init --recursive
   cargo build --release --features with-$1-runtime
-  cp ./target/release/acala ~/$1
+  cp ./target/release/acala $HOME/zeeve/$1
 }
 
 generic_chain() {
   cargo build --release
-  cp ./target/release/$1
+  cp ./target/release/$1 $HOME/zeeve/$1
 }
 
 build_binary() {
