@@ -15,15 +15,20 @@ sudo apt-get install -y git clang curl libssl-dev llvm libudev-dev protobuf-comp
 
 repo_setup() {
 cd $HOME/zeeve
-# Clone the specified Git repository
-sudo git clone $git_link --depth 1
-# Get the name of the repository directory
 repo_dir=$(echo $git_link | awk -F/ '{print $NF}' | sed 's/.git$//')
-# Change ownership of the repository directory to the current user
-sudo chown -R $USER:$USER $repo_dir
-# Configure Git to recursively clone submodules
-cd $repo_dir && git config --global submodule.recurse true
-cd ..
+if [ -d $HOME/zeeve/$repo_dir ] 
+then
+    echo "Directory $HOME/zeeve/$repo_dir exists." 
+else
+  # Clone the specified Git repository
+  sudo git clone $git_link --depth 1
+  # Get the name of the repository directory
+  # Change ownership of the repository directory to the current user
+  sudo chown -R $USER:$USER $repo_dir
+  # Configure Git to recursively clone submodules
+  cd $repo_dir && git config --global submodule.recurse true
+  cd ..
+fi
 }
 
 acala_chain() {
@@ -36,9 +41,15 @@ acala_chain() {
 
 generic_chain() {
   cd $repo_dir
-  cargo build --release
-  cp ./target/release/$1 ..
-  cd ..
+    echo $HOME/zeeve/$repo_dir/target/release/$1
+  if [ -f $HOME/zeeve/$repo_dir/target/release/$1 ] 
+  then
+    cp ./target/release/$1 ../$1-bin 
+  else
+    cargo build --release
+    cp ./target/release/$1 ../$1-bin
+    cd ..
+  fi
 }
 
 build_binary() {

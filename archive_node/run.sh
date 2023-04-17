@@ -8,7 +8,7 @@ DATA_DIR=$ZEEVE_DIR/$DATA_DIR_NAME
 cd $ZEEVE_DIR
 mkdir -p $DATA_DIR_NAME
 
-./${name} \
+./${name}-bin \
 --port 30333 \
 --rpc-port 9933 \
 --ws-port 9944 \

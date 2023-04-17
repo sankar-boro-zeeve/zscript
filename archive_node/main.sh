@@ -20,11 +20,8 @@ then
 	exit 1
 fi
 
-cd $HOME
-echo "Current directory: $HOME"
-install_rust
-install_linux_packages
-sudo apt update -y
+# install_rust
+# install_linux_packages
 repo_setup
 build_binary ${name}
 run_binary
