@@ -2,7 +2,7 @@
 
 run_binary() {
 DATA_DIR_NAME=${name}-data
-DATA_DIR=$HOME/${DATA_DIR_NAME}
+DATA_DIR=$HOME/zeeve/${DATA_DIR_NAME}
 mkdir $DATA_DIR
 
 $HOME/${name} \
