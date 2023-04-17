@@ -20,7 +20,7 @@ then
 	exit 1
 fi
 
-sudo apt update && sudo apt upgrade
+sudo apt update -y && sudo apt upgrade -y
 install_rust
 install_linux_packages
 repo_setup
