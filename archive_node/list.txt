@@ -1,3 +1,6 @@
 name        github                                              repo_name       binary_name     relay_chain     para_chain
 moonbeam    https://github.com/PureStake/moonbeam               moonbeam        moonbeam        polkadot        moonbeam
 hydradx     https://github.com/galacticcouncil/HydraDX-node     HydraDX-node    hydradx         polkadot        hydradx
+acala       https://github.com/AcalaNetwork/Acala               Acala           acala           polkadot        acala
+karura      https://github.com/AcalaNetwork/Acala               Acala           acala           kusama          karura
+mandala     https://github.com/AcalaNetwork/Acala               Acala           acala           rococo          mandala
