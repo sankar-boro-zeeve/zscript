@@ -14,14 +14,14 @@ fi
 run_args "${@}"
 
 # Check if a Git repository URL has been provided
-if [ "$#" -ne 10 ]
+if [ "$#" -ne 1 ]
 then
-	echo "Usage: ./binary.sh -g <github-url> -n <name> -r <relay_chain> -p <para_chain> -u ubuntu"
+	echo "Usage: ./main.sh <name>. Eg: ./main.sh moonbeam"
 	exit 1
 fi
 
-install_rust
-install_linux_packages
+# install_rust
+# install_linux_packages
 repo_setup
 build_binary ${name}
 run_binary

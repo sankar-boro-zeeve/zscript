@@ -1,0 +1,3 @@
+name        github                                              repo_name       binary_name     relay_chain     para_chain
+moonbeam    https://github.com/PureStake/moonbeam               moonbeam        moonbeam        polkadot        moonbeam
+hydradx     https://github.com/galacticcouncil/HydraDX-node     HydraDX-node    hydradx         polkadot        hydradx

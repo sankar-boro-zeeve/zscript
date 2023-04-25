@@ -8,7 +8,7 @@ Help()
    # Display Help
    echo "HELP"
    echo
-   echo "Usage: ./binary.sh -g <github-url> -b <binary-name> -r <relay_chain> -p <para_chain> -u ubuntu"
+   echo "Usage: ./main.sh <name>. Eg: ./main.sh moonbeam"
    echo "options:"
    echo "g     Github repository link. Eg: https://github.com/moonbeam/moonbeam"
    echo "h     Print this Help."
