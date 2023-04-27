@@ -1,8 +1,9 @@
-name        github                                              repo_name           binary_name         relay_chain     para_chain      load_spec       spec
-moonbeam    https://github.com/PureStake/moonbeam               moonbeam            moonbeam            polkadot        moonbeam        false           null
-hydradx     https://github.com/galacticcouncil/HydraDX-node     HydraDX-node        hydradx             polkadot        hydradx         false           null
-acala       https://github.com/AcalaNetwork/Acala               Acala               acala               polkadot        acala           false           null
-karura      https://github.com/AcalaNetwork/Acala               Acala               acala               kusama          karura          false           null
-mandala     https://github.com/AcalaNetwork/Acala               Acala               acala               rococo          mandala         false           null
-bitgreen    https://github.com/bitgreen/bitgreen-node.git       bitgreen-node       bitgreen-parachain  polkadot        bitgreen        true            artifacts/polkadot/bitgreen-polkadot-2048-raw.json
-astar       https://github.com/AstarNetwork/Astar               Astar               astar-collator      polkadot        astar           false           null
+name        github                                              repo_name           binary_name         relay_chain     para_chain          load_spec       spec
+moonbeam    https://github.com/PureStake/moonbeam               moonbeam            moonbeam            polkadot        moonbeam            false           null
+hydradx     https://github.com/galacticcouncil/HydraDX-node     HydraDX-node        hydradx             polkadot        hydradx             false           null
+acala       https://github.com/AcalaNetwork/Acala               Acala               acala               polkadot        acala               false           null
+karura      https://github.com/AcalaNetwork/Acala               Acala               acala               kusama          karura              false           null
+mandala     https://github.com/AcalaNetwork/Acala               Acala               acala               rococo          mandala             false           null
+bitgreen    https://github.com/bitgreen/bitgreen-node.git       bitgreen-node       bitgreen-parachain  polkadot        bitgreen            true            artifacts/polkadot/bitgreen-polkadot-2048-raw.json
+astar       https://github.com/AstarNetwork/Astar               Astar               astar-collator      polkadot        astar               false           null
+bifrost     https://github.com/bifrost-finance/bifrost          bifrost             bifrost             polkadot        bifrost-polkadot    false           null

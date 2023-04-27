@@ -44,12 +44,16 @@ acala_chain() {
 
 generic_chain() {
   cd $repo_dir
-  echo $HOME/zeeve/$repo_dir/target/release/$bname
   if [ -f $HOME/zeeve/$repo_dir/target/release/$bname ] 
   then
     cp ./target/release/$bname ../$bname-bin 
   else
-    cargo build --release
+    if [ $build_command == "default"]
+    then
+      cargo build --release
+    else
+      $build_command
+    fi
     cp ./target/release/$bname ../$bname-bin
     cd ..
   fi
