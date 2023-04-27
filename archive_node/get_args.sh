@@ -55,4 +55,6 @@ run_args() {
   bname=${ADDR[3]}
   rchain=${ADDR[4]}
   pchain=${ADDR[5]}
+  lspec=${ADDR[6]}
+  specf=${ADDR[7]}
 }

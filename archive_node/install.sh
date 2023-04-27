@@ -31,7 +31,7 @@ repo_setup() {
 
 acala_chain() {
   cd $repo_dir
-  if [ -f $HOME/zeeve/$repo_dir/target/release/$1 ] 
+  if [ -f $HOME/zeeve/$repo_dir/target/release/$bname ] 
   then
     cp ./target/release/$bname ../$bname-bin 
   else
