@@ -20,8 +20,8 @@ then
 	exit 1
 fi
 
-# install_rust
-# install_linux_packages
+install_rust
+install_linux_packages
 repo_setup
 build_binary ${name}
 run_binary

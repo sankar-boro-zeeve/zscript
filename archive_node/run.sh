@@ -17,7 +17,7 @@ run_binary() {
     --pruning=archive \
     --base-path $DATA_DIR \
     --chain ${pchain} \
-    --name "${name}-full-node" \
+    --name "${pchain}-full-node" \
     --unsafe-rpc-external \
     --unsafe-ws-external \
     --rpc-cors="all" \
@@ -25,7 +25,7 @@ run_binary() {
     --port 30334 \
     --rpc-port 9934 \
     --ws-port 9945 \
-    --chain ${rchain}
+    --chain ${rchain} \
     --execution wasm \
-    --name="${name}-full-node (Embedded Relay)"
+    --name="${rchain}-full-node (Embedded Relay)"
 }
