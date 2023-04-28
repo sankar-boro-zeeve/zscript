@@ -58,7 +58,4 @@ run_args() {
   pchain=${ADDR[5]}
   lspec=${ADDR[6]}
   specf=${ADDR[7]}
-  build_txt="${name}_build"
-  build_command=${!build_txt}
-  echo "build command :$build_command"
 }
