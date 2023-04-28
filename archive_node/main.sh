@@ -4,6 +4,7 @@ source help.sh
 source get_args.sh
 source install.sh
 source run.sh
+source commands.sh
 
 if [[ $@ == *"-h"* ]]
   then

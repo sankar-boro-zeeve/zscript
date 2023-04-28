@@ -43,16 +43,12 @@ run_args() {
   bname=""
   rchain=""
   pchain=""
-  build_command="default"
 
   env_file=`cat list.txt`
-  commands_file=`cat commands.txt`  
   line=$(echo "$env_file" | grep ${NAME})
-  line2=$(echo "$commands_file" | grep ${NAME})
 
   IFS=' '
   read -ra ADDR <<< "$line"
-  read -ra ADDR2 <<< "$line2"
 
   name=${ADDR[0]}
   gitlink=${ADDR[1]}
@@ -62,5 +58,7 @@ run_args() {
   pchain=${ADDR[5]}
   lspec=${ADDR[6]}
   specf=${ADDR[7]}
-  build_command="${ADDR2[1]} ${ADDR2[2]}"
+  build_txt="${name}_build"
+  build_command=${!build_txt}
+  echo "build command :$build_command"
 }

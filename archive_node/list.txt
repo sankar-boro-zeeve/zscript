@@ -7,3 +7,4 @@ mandala     https://github.com/AcalaNetwork/Acala               Acala           
 bitgreen    https://github.com/bitgreen/bitgreen-node.git       bitgreen-node       bitgreen-parachain  polkadot        bitgreen            true            artifacts/polkadot/bitgreen-polkadot-2048-raw.json
 astar       https://github.com/AstarNetwork/Astar               Astar               astar-collator      polkadot        astar               false           null
 bifrost     https://github.com/bifrost-finance/bifrost          bifrost             bifrost             polkadot        bifrost-polkadot    false           null
+crust       https://github.com/crustio/crust                    crust               crust               polkadot        crust               false           null

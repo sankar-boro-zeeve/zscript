@@ -43,18 +43,17 @@ acala_chain() {
 }
 
 generic_chain() {
+  echo "lksjdfs"
   cd $repo_dir
   if [ -f $HOME/zeeve/$repo_dir/target/release/$bname ] 
   then
+    echo "came here 1"
     cp ./target/release/$bname ../$bname-bin 
+    cd ..
   else
-    if [ $build_command == "default"]
-    then
-      cargo build --release
-    else
-      $build_command
-    fi
-    cp ./target/release/$bname ../$bname-bin
+    echo "came here 2"
+    echo $build_command
+    $build_command
     cd ..
   fi
 }

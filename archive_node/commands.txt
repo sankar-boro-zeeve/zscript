@@ -1,1 +1,0 @@
-bifrost make build-bifrost-polkadot-release
