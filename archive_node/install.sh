@@ -29,20 +29,7 @@ repo_setup() {
   fi
 }
 
-acala_chain() {
-  cd $repo_dir
-  if [ -f $HOME/zeeve/$repo_dir/target/release/$bname ] 
-  then
-    cp ./target/release/$bname ../$bname-bin 
-  else
-    git submodule update --init --recursive
-    cargo build --release --features with-$bname-runtime
-    cp ./target/release/acala ../$bname-bin
-    cd ..
-  fi
-}
-
-generic_chain() {
+build_binary() {
   build_command="${name}_build"
   cd $repo_dir
   if [ -f $HOME/zeeve/$repo_dir/target/release/$bname ] 
@@ -52,23 +39,5 @@ generic_chain() {
   else
     $build_command
     cd ..
-  fi
-}
-
-build_binary() {
-  if [ $name == "acala" ]
-  then
-    acala_chain
-  elif [ $name == "mandala" ]
-  then
-    acala_chain
-  elif [ $name == "karura" ]
-  then
-    acala_chain
-  elif [ $name == "generic" ]
-  then
-    generic_chain
-  else
-    generic_chain
   fi
 }
