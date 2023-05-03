@@ -17,6 +17,8 @@ run_binary() {
         chainkey=$pchain
     fi
 
+    echo "--chain ${chainkey}"
+    
     ./${bname}-bin \
     --port 30333 \
     --rpc-port 9933 \

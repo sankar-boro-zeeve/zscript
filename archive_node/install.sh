@@ -37,7 +37,8 @@ build_binary() {
     cp ./target/release/$bname ../$bname-bin 
     cd ..
   else
-    $build_command
+    type $build_command &>/dev/null && $build_command || default_build
+    cp ./target/release/$bname ../$bname-bin 
     cd ..
   fi
 }
