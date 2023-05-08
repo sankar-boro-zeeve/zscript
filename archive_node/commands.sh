@@ -26,5 +26,15 @@ mandala_build() {
 
 default_build() {
     echo "default build"
+    if [ -d $HOME/zeeve/$repo_dir/scripts ]
+    then
+        if [ -f $HOME/zeeve/$repo_dir/scripts/init.sh ]
+        then
+            ./scripts/init.sh
+        fi
+    else
+        echo "No ./init.sh file"
+    fi
+
     cargo build --release
 }

@@ -29,9 +29,11 @@ repo_setup() {
   fi
 }
 
+
 build_binary() {
   build_command="${name}_build"
   cd $repo_dir
+
   if [ -f $HOME/zeeve/$repo_dir/target/release/$bname ] 
   then
     cp ./target/release/$bname ../$bname-bin 

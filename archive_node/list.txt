@@ -17,5 +17,8 @@ unique      https://github.com/UniqueNetwork/unique-chain       unique-chain    
 interbtc    https://github.com/interlay/interbtc.git            interbtc            interbtc-parachain  polkadot        interlay            false           null
 kilt        https://github.com/KILTprotocol/kilt-node           kilt-node           kilt-parachain      polkadot        spiritnet           true            nodes/parachain/res/spiritnet.json
 pendulum    https://github.com/pendulum-chain/pendulum          pendulum            pendulum-node       polkadot        pendulum            true            res/pendulum-spec-raw.json
+ssocial     https://github.com/dappforce/subsocial-parachain    subsocial-parachain subsocial-collator  polkadot        subsocial           true            node/res/subsocial-polkadot.json 
+
+
 
 crust       https://github.com/crustio/crust                    crust               crust               polkadot        crust               false           null
