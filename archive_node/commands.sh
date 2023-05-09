@@ -24,12 +24,17 @@ mandala_build() {
     acala_build
 }
 
+manta_build() {
+    cargo b --profile production
+}
+
 default_build() {
     echo "default build"
     if [ -d $HOME/zeeve/$repo_dir/scripts ]
     then
         if [ -f $HOME/zeeve/$repo_dir/scripts/init.sh ]
         then
+            chmod u+x ./scripts/init.sh
             ./scripts/init.sh
         fi
     else

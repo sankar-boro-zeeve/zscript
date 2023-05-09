@@ -18,6 +18,7 @@ interbtc    https://github.com/interlay/interbtc.git            interbtc        
 kilt        https://github.com/KILTprotocol/kilt-node           kilt-node           kilt-parachain      polkadot        spiritnet           true            nodes/parachain/res/spiritnet.json
 pendulum    https://github.com/pendulum-chain/pendulum          pendulum            pendulum-node       polkadot        pendulum            true            res/pendulum-spec-raw.json
 ssocial     https://github.com/dappforce/subsocial-parachain    subsocial-parachain subsocial-collator  polkadot        subsocial           true            node/res/subsocial-polkadot.json 
+manta       https://github.com/Manta-Network/Manta              Manta               manta               polkadot        manta               true            genesis/manta-genesis.json
 
 
 

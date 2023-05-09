@@ -38,6 +38,10 @@ build_binary() {
   then
     cp ./target/release/$bname ../$bname-bin 
     cd ..
+  elif [ -f $HOME/zeeve/$repo_dir/target/production/$bname ]
+  then
+    cp ./target/production/$bname ../$bname-bin 
+    cd ..
   else
     type $build_command &>/dev/null && $build_command || default_build
     cp ./target/release/$bname ../$bname-bin 
