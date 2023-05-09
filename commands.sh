@@ -26,20 +26,10 @@ mandala_build() {
 
 manta_build() {
     cargo b --profile production
+    cp ./target/production/$bname ../$bname-bin
 }
 
 default_build() {
-    echo "default build"
-    if [ -d $HOME/zeeve/$repo_dir/scripts ]
-    then
-        if [ -f $HOME/zeeve/$repo_dir/scripts/init.sh ]
-        then
-            chmod u+x ./scripts/init.sh
-            ./scripts/init.sh
-        fi
-    else
-        echo "No ./init.sh file"
-    fi
-
     cargo build --release
+    cp ./target/release/$bname ../$bname-bin
 }

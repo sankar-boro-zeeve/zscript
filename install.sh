@@ -29,6 +29,18 @@ repo_setup() {
   fi
 }
 
+run_init() {
+  if [ -d $HOME/zeeve/$repo_dir/scripts ]
+  then
+    if [ -f $HOME/zeeve/$repo_dir/scripts/init.sh ]
+    then
+      chmod u+x ./scripts/init.sh
+      ./scripts/init.sh
+    fi
+  else
+    echo "No ./init.sh file"
+  fi
+}
 
 build_binary() {
   build_command="${name}_build"
@@ -43,8 +55,8 @@ build_binary() {
     cp ./target/production/$bname ../$bname-bin 
     cd ..
   else
+    run_init
     type $build_command &>/dev/null && $build_command || default_build
-    cp ./target/release/$bname ../$bname-bin 
     cd ..
   fi
 }
