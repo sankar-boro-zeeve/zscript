@@ -1,0 +1,4 @@
+Aventus         not working
+
+crust           https://github.com/crustio/crust                    crust                   crust                   polkadot        crust               false           null
+origintrail     polkadot        https://github.com/OriginTrail/origintrail-parachain    origintrail-parachain   origintrail-parachain           origintrail         true            res/origintrail-parachain-2043-raw.json

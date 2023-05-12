@@ -19,8 +19,3 @@ kilt            polkadot        https://github.com/KILTprotocol/kilt-node       
 pendulum        polkadot        https://github.com/pendulum-chain/pendulum              pendulum                pendulum-node                   pendulum            true            res/pendulum-spec-raw.json
 ssocial         polkadot        https://github.com/dappforce/subsocial-parachain        subsocial-parachain     subsocial-collator              subsocial           true            node/res/subsocial-polkadot.json 
 manta           polkadot        https://github.com/Manta-Network/Manta                  Manta                   manta                           manta               true            genesis/manta-genesis.json
-
-
-
-crust           https://github.com/crustio/crust                    crust                   crust                   polkadot        crust               false           null
-origintrail     polkadot        https://github.com/OriginTrail/origintrail-parachain    origintrail-parachain   origintrail-parachain           origintrail         true            res/origintrail-parachain-2043-raw.json

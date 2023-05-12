@@ -57,6 +57,15 @@ build_binary() {
   else
     run_init
     type $build_command &>/dev/null && $build_command || default_build
+    if [ -f $HOME/zeeve/$repo_dir/target/release/$bname ] 
+    then
+      cp ./target/release/$bname ../$bname-bin
+    elif [ -f $HOME/zeeve/$repo_dir/target/production/$bname ]
+    then
+      cp ./target/production/$bname ../$bname-bin
+    else
+      echo "..."
+    fi
     cd ..
   fi
 }
