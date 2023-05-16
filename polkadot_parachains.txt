@@ -1,10 +1,12 @@
 Polkadot (Relay chain); 
 Acala (ParaID: 2000); 
 Ajuna (ParaID: 2051); 
+Aleph Zero (ParaID: 2106); 
 Astar (ParaID: 2006); 
 Aventus (ParaID: 2056); 
 Bifrost (ParaID: 2030); 
 Bitgreen (ParaID: 2048); 
+BridgeHub (ParaID: 1002); 
 Centrifuge (ParaID: 2031); 
 Clover Finance (ParaID: 2002); 
 Collectives (ParaID: 1001); 

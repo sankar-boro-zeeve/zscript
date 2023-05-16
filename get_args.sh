@@ -41,7 +41,7 @@ run_args() {
   gitlink=""
   repo_dir=""
   bname=""
-  rchain=""
+  rchain="polkadot"
   pchain=""
 
   env_file=`cat list.txt`
@@ -51,11 +51,10 @@ run_args() {
   read -ra ADDR <<< "$line"
 
   name=${ADDR[0]}
-  rchain=${ADDR[1]}
-  gitlink=${ADDR[2]}
-  repo_dir=${ADDR[3]}
-  bname=${ADDR[4]}
-  pchain=${ADDR[5]}
-  lspec=${ADDR[6]}
-  specf=${ADDR[7]}
+  gitlink=${ADDR[1]}
+  repo_dir=${ADDR[2]}
+  bname=${ADDR[3]}
+  pchain=${ADDR[4]}
+  lspec=${ADDR[5]}
+  specf=${ADDR[6]}
 }

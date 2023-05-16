@@ -18,3 +18,24 @@ Help()
    echo "u     Username. Eg: ubuntu"
    echo
 }
+
+List()
+{
+   echo "
+   polkadot,
+   acala, aleph, astar, 
+   bifrost, bitgreen, bridgehub, 
+   collectives, 
+   darwinia, 
+   frequency, 
+   hydradx, 
+   interlay, 
+   kapex, kilt, 
+   litentry, 
+   manta, moonbeam, 
+   nodle, 
+   parallel, pendullum, 
+   statemint, subsocial, 
+   unique, 
+   watr"
+}

@@ -1,21 +1,25 @@
-name            relay_chain     github                                                  repo_name               binary_name                     para_chain          load_spec       spec
-moonbeam        polkadot        https://github.com/PureStake/moonbeam                   moonbeam                moonbeam                        moonbeam            false           null
-hydradx         polkadot        https://github.com/galacticcouncil/HydraDX-node         HydraDX-node            hydradx                         hydradx             false           null
-acala           polkadot        https://github.com/AcalaNetwork/Acala                   Acala                   acala                           acala               false           null
-bitgreen        polkadot        https://github.com/bitgreen/bitgreen-node.git           bitgreen-node           bitgreen-parachain              bitgreen            true            artifacts/polkadot/bitgreen-polkadot-2048-raw.json
-astar           polkadot        https://github.com/AstarNetwork/Astar                   Astar                   astar-collator                  astar               false           null
-bifrost         polkadot        https://github.com/bifrost-finance/bifrost              bifrost                 bifrost                         bifrost-polkadot    false           null
-clover          polkadot        https://github.com/clover-network/clover                clover                  clover                          clover              false           null
-watr            polkadot        https://github.com/Watr-Protocol/watr                   watr                    watr-node                       watrmainnet         true            chain-specs/mainnet-raw.json
-ajuna           polkadot        https://github.com/ajuna-network/Ajuna                  Ajuna                   ajuna-para                      ajuna-polkadot      true            resources/ajuna/ajuna-raw.json
-centrifuge      polkadot        https://github.com/centrifuge/centrifuge-chain          centrifuge-chain        centrifuge-chain                centrifuge          false           null
-kylin           polkadot        https://github.com/Kylin-Network/kylin-collator         kylin-collator          kylin-collator                  kylin               false           null
-parallel        polkadot        https://github.com/parallel-finance/parallel            parallel                parallel                        parallel            false           null
-darwinia        polkadot        https://github.com/darwinia-network/darwinia            darwinia                darwinia                        darwinia            false           null
-frequency       polkadot        https://github.com/LibertyDSNP/frequency                frequency               frequency                       frequency           false           null
-unique          polkadot        https://github.com/UniqueNetwork/unique-chain           unique-chain            unique-collator                 unique              true            chain-specs/unique.json
-interbtc        polkadot        https://github.com/interlay/interbtc.git                interbtc                interbtc-parachain              interlay            false           null
-kilt            polkadot        https://github.com/KILTprotocol/kilt-node               kilt-node               kilt-parachain                  spiritnet           true            nodes/parachain/res/spiritnet.json
-pendulum        polkadot        https://github.com/pendulum-chain/pendulum              pendulum                pendulum-node                   pendulum            true            res/pendulum-spec-raw.json
-ssocial         polkadot        https://github.com/dappforce/subsocial-parachain        subsocial-parachain     subsocial-collator              subsocial           true            node/res/subsocial-polkadot.json 
-manta           polkadot        https://github.com/Manta-Network/Manta                  Manta                   manta                           manta               true            genesis/manta-genesis.json
+name            github                                                  repo_name               binary_name                     para_chain          load_spec       spec
+polkadot
+acala           https://github.com/AcalaNetwork/Acala                   Acala                   acala                           acala               false           null
+aleph           https://github.com/aleph-zero-foundation/aleph-node     aleph-node              aleph-node                      mainnet
+astar           https://github.com/AstarNetwork/Astar                   Astar                   astar-collator                  astar               false           null
+ajuna           https://github.com/ajuna-network/Ajuna                  Ajuna                   ajuna-para                      ajuna-polkadot      true            resources/ajuna/ajuna-raw.json
+bifrost         https://github.com/bifrost-finance/bifrost              bifrost                 bifrost                         bifrost-polkadot    false           null
+bridgehub       https://github.com/paritytech/cumulus                   cumulus                 polkadot-parachain              bridgehub           false           parachains/chain-specs/bridge-hub-polkadot.json
+moonbeam        https://github.com/PureStake/moonbeam                   moonbeam                moonbeam                        moonbeam            false           null
+hydradx         https://github.com/galacticcouncil/HydraDX-node         HydraDX-node            hydradx                         hydradx             false           null
+bitgreen        https://github.com/bitgreen/bitgreen-node.git           bitgreen-node           bitgreen-parachain              bitgreen            true            artifacts/polkadot/bitgreen-polkadot-2048-raw.json
+clover          https://github.com/clover-network/clover                clover                  clover                          clover              false           null
+watr            https://github.com/Watr-Protocol/watr                   watr                    watr-node                       watrmainnet         true            chain-specs/mainnet-raw.json
+centrifuge      https://github.com/centrifuge/centrifuge-chain          centrifuge-chain        centrifuge-chain                centrifuge          false           null
+kylin           https://github.com/Kylin-Network/kylin-collator         kylin-collator          kylin-collator                  kylin               false           null
+parallel        https://github.com/parallel-finance/parallel            parallel                parallel                        parallel            false           null
+darwinia        https://github.com/darwinia-network/darwinia            darwinia                darwinia                        darwinia            false           null
+frequency       https://github.com/LibertyDSNP/frequency                frequency               frequency                       frequency           false           null
+unique          https://github.com/UniqueNetwork/unique-chain           unique-chain            unique-collator                 unique              true            chain-specs/unique.json
+interbtc        https://github.com/interlay/interbtc.git                interbtc                interbtc-parachain              interlay            false           null
+kilt            https://github.com/KILTprotocol/kilt-node               kilt-node               kilt-parachain                  spiritnet           true            nodes/parachain/res/spiritnet.json
+pendulum        https://github.com/pendulum-chain/pendulum              pendulum                pendulum-node                   pendulum            true            res/pendulum-spec-raw.json
+ssocial         https://github.com/dappforce/subsocial-parachain        subsocial-parachain     subsocial-collator              subsocial           true            node/res/subsocial-polkadot.json 
+manta           https://github.com/Manta-Network/Manta                  Manta                   manta                           manta               true            genesis/manta-genesis.json
+nodle           https://github.com/NodleCode/chain                      chain                   nodle-parachain                 nodle               true            nodle

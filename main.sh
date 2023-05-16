@@ -7,9 +7,15 @@ source run.sh
 source commands.sh
 
 if [[ $@ == *"-h"* ]]
+then
+  Help
+  exit 0
+fi
+
+if [[ $@ == *"-l"* ]]
   then
-    Help
-    exit 1
+  List
+  exit 0
 fi
 
 run_args "${@}"
@@ -23,9 +29,9 @@ fi
 
 # install_rust
 # install_linux_packages
-repo_setup
-build_binary ${name}
-run_binary
+# repo_setup
+# build_binary ${name}
+# run_binary
 
 # ./main.sh -g https://github.com/PureStake/moonbeam -n moonbeam -r polkadot -p moonbeam -u sankar
 

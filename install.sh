@@ -42,30 +42,34 @@ run_init() {
   fi
 }
 
+copy_bin() {
+  if [ -f $HOME/zeeve/$repo_dir/target/release/$bname ] 
+  then
+    cp ./target/release/$bname ../$bname-bin 
+    echo true
+  elif [ -f $HOME/zeeve/$repo_dir/target/production/$bname ]
+  then
+    cp ./target/production/$bname ../$bname-bin 
+    echo true
+  else
+    echo false
+  fi
+}
+
+
 build_binary() {
   build_command="${name}_build"
   cd $repo_dir
 
-  if [ -f $HOME/zeeve/$repo_dir/target/release/$bname ] 
+  run_init
+  local res=$(copy_bin)
+  
+  if [ $res == true ]
   then
-    cp ./target/release/$bname ../$bname-bin 
-    cd ..
-  elif [ -f $HOME/zeeve/$repo_dir/target/production/$bname ]
-  then
-    cp ./target/production/$bname ../$bname-bin 
     cd ..
   else
-    run_init
     type $build_command &>/dev/null && $build_command || default_build
-    if [ -f $HOME/zeeve/$repo_dir/target/release/$bname ] 
-    then
-      cp ./target/release/$bname ../$bname-bin
-    elif [ -f $HOME/zeeve/$repo_dir/target/production/$bname ]
-    then
-      cp ./target/production/$bname ../$bname-bin
-    else
-      echo "..."
-    fi
+    copy_bin
     cd ..
   fi
 }
