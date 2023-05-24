@@ -1,9 +1,8 @@
 #!/bin/bash
 
 acala_build() {
-    echo "cargo build --release --features with-$name-runtime"
     git submodule update --init --recursive
-    cargo build --release --features with-$name-runtime
+    cargo build --locked --features with-all-runtime
 }
 
 astar_build() {
@@ -18,7 +17,7 @@ bifrost_build() {
 }
 
 bitgreen_build() {
-    default_build
+    cargo build --release -p bitgreen-parachain
 }
 
 bridgehub_build() {
@@ -27,6 +26,10 @@ bridgehub_build() {
 
 crust_build() {
     default_build
+}
+
+frequency_build() {
+    cargo build --locked --features frequency --release
 }
 
 karura_build() {
@@ -53,4 +56,14 @@ unique_build() {
 
 nodle_build() {
     cargo build --release -p nodle-parachain
+}
+
+oak_build() {
+    cargo build --locked --release --features turing-node,oak-node
+}
+
+centrifuge_build() {
+    chmod +x ./scripts/install_toolchain.sh
+    ./scripts/install_toolchain.sh
+    cargo build --release --features=fast-runtime
 }

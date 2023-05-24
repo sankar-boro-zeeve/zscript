@@ -61,13 +61,13 @@ build_binary() {
   build_command="${name}_build"
   cd $repo_dir
 
-  run_init
   local res=$(copy_bin)
   
   if [ $res == true ]
   then
     cd ..
   else
+    # run_init
     type $build_command &>/dev/null && $build_command || default_build
     copy_bin
     cd ..

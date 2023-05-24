@@ -1,25 +1,42 @@
 name            github                                                  repo_name               binary_name                     para_chain          load_spec       spec
-polkadot
+
+polkadot        https://github.com/paritytech/polkadot                  polkadot                polkadot                        polkadot            false           null
+
 acala           https://github.com/AcalaNetwork/Acala                   Acala                   acala                           acala               false           null
-aleph           https://github.com/aleph-zero-foundation/aleph-node     aleph-node              aleph-node                      mainnet
+aleph           https://github.com/aleph-zero-foundation/aleph-node     aleph-node              aleph-node                      mainnet             false           null
 astar           https://github.com/AstarNetwork/Astar                   Astar                   astar-collator                  astar               false           null
-ajuna           https://github.com/ajuna-network/Ajuna                  Ajuna                   ajuna-para                      ajuna-polkadot      true            resources/ajuna/ajuna-raw.json
 bifrost         https://github.com/bifrost-finance/bifrost              bifrost                 bifrost                         bifrost-polkadot    false           null
-bridgehub       https://github.com/paritytech/cumulus                   cumulus                 polkadot-parachain              bridgehub           false           parachains/chain-specs/bridge-hub-polkadot.json
-moonbeam        https://github.com/PureStake/moonbeam                   moonbeam                moonbeam                        moonbeam            false           null
-hydradx         https://github.com/galacticcouncil/HydraDX-node         HydraDX-node            hydradx                         hydradx             false           null
+bridgehub       https://github.com/paritytech/cumulus                   cumulus                 polkadot-parachain              bridgehub           true            parachains/chain-specs/bridge-hub-polkadot.json
 bitgreen        https://github.com/bitgreen/bitgreen-node.git           bitgreen-node           bitgreen-parachain              bitgreen            true            artifacts/polkadot/bitgreen-polkadot-2048-raw.json
-clover          https://github.com/clover-network/clover                clover                  clover                          clover              false           null
-watr            https://github.com/Watr-Protocol/watr                   watr                    watr-node                       watrmainnet         true            chain-specs/mainnet-raw.json
-centrifuge      https://github.com/centrifuge/centrifuge-chain          centrifuge-chain        centrifuge-chain                centrifuge          false           null
-kylin           https://github.com/Kylin-Network/kylin-collator         kylin-collator          kylin-collator                  kylin               false           null
-parallel        https://github.com/parallel-finance/parallel            parallel                parallel                        parallel            false           null
+collectives     https://github.com/paritytech/cumulus                   cumulus                 polkadot-parachain              collectives         true            parachains/chain-specs/collectives-polkadot.json
 darwinia        https://github.com/darwinia-network/darwinia            darwinia                darwinia                        darwinia            false           null
-frequency       https://github.com/LibertyDSNP/frequency                frequency               frequency                       frequency           false           null
-unique          https://github.com/UniqueNetwork/unique-chain           unique-chain            unique-collator                 unique              true            chain-specs/unique.json
-interbtc        https://github.com/interlay/interbtc.git                interbtc                interbtc-parachain              interlay            false           null
+frequency       https://github.com/LibertyDSNP/frequency                frequency               frequency                       frequency           true            resources/frequency.raw.json
+hydradx         https://github.com/galacticcouncil/HydraDX-node         HydraDX-node            hydradx                         hydradx             false           null
+interlay        https://github.com/interlay/interbtc.git                interbtc                interbtc-parachain              interlay            false           null
+kapex           https://github.com/totem-tech/totem-parachains          totem-parachains        totem-parachain-collator        totem               true            res/kapex/kapex-parachain-raw-original.json   
 kilt            https://github.com/KILTprotocol/kilt-node               kilt-node               kilt-parachain                  spiritnet           true            nodes/parachain/res/spiritnet.json
-pendulum        https://github.com/pendulum-chain/pendulum              pendulum                pendulum-node                   pendulum            true            res/pendulum-spec-raw.json
-ssocial         https://github.com/dappforce/subsocial-parachain        subsocial-parachain     subsocial-collator              subsocial           true            node/res/subsocial-polkadot.json 
+litentry        https://github.com/litentry/litentry-parachain          litentry-parachain      litentry-collator               litentry            true            node/res/chain_specs/litentry.json
 manta           https://github.com/Manta-Network/Manta                  Manta                   manta                           manta               true            genesis/manta-genesis.json
-nodle           https://github.com/NodleCode/chain                      chain                   nodle-parachain                 nodle               true            nodle
+moonbeam        https://github.com/PureStake/moonbeam                   moonbeam                moonbeam                        moonbeam            false           null
+nodle           https://github.com/NodleCode/chain                      chain                   nodle-parachain                 eden                true            node/res/eden.json
+origintrail     https://github.com/OriginTrail/origintrail-parachain    origintrail-parachain   origintrail-parachain           origintrail         true            res/origintrail-parachain-2043-raw.json
+parallel        https://github.com/parallel-finance/parallel            parallel                parallel                        parallel            false           null
+pendulum        https://github.com/pendulum-chain/pendulum              pendulum                pendulum-node                   pendulum            true            res/pendulum-spec-raw.json
+statemint       https://github.com/paritytech/cumulus                   cumulus                 polkadot-parachain              statemint           false           null
+zeitgeist       https://github.com/zeitgeistpm/zeitgeist                zeitgeist               zeitgeist                       zeitgeist           true            node/res/zeitgeist_parachain.json
+
+
+watr            https://github.com/Watr-Protocol/watr                   watr                    watr-node                       watrmainnet         true            chain-specs/mainnet-raw.json
+unique          https://github.com/UniqueNetwork/unique-chain           unique-chain            unique-collator                 unique              true            chain-specs/unique.json
+equilibrium     https://github.com/eq-lab/equilibrium                   equilibrium             equilibrium                     equilibrium         false           null  
+centrifuge      https://github.com/centrifuge/centrifuge-chain          centrifuge-chain        centrifuge-chain                centrifuge          false           null
+ssocial         https://github.com/dappforce/subsocial-parachain        subsocial-parachain     subsocial-collator              subsocial           true            node/res/subsocial-polkadot.json 
+ajuna           https://github.com/ajuna-network/Ajuna                  Ajuna                   ajuna-para                      ajuna-polkadot      true            resources/ajuna/ajuna-raw.json
+clover          https://github.com/clover-network/clover                clover                  clover                          clover              false           null
+kylin           https://github.com/Kylin-Network/kylin-collator         kylin-collator          kylin-collator                  kylin               false           null
+composable      https://github.com/ComposableFi/centauri                centauri                centauri                        composable          false           null
+phala           https://github.com/Phala-Network/phala-blockchain       phala-blockchain        phala-node                      phala               false           null
+integritee      https://github.com/integritee-network/integritee-node   integritee-node         integritee-node                 integritee          false           null
+polkadex        https://github.com/Polkadex-Substrate/Polkadex          Polkadex                polkadex-node                   mainnet             false           null   
+hashed          https://github.com/hashed-io/hashed-substrate           hashed-substrate        hashed-parachain                hashed              false           null
+oak             https://github.com/OAK-Foundation/OAK-blockchain        OAK-blockchain          oak-collator                    oak                 false           null

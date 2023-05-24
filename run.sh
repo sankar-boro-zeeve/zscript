@@ -19,24 +19,61 @@ run_binary() {
 
     echo "--chain ${chainkey}"
     
-    ./${bname}-bin \
-    --port 30333 \
-    --rpc-port 9933 \
-    --ws-port 9944 \
-    --execution wasm \
-    --wasm-execution compiled \
-    --pruning=archive \
-    --base-path $DATA_DIR \
-    --chain ${chainkey} \
-    --name "${pchain}-full-node" \
-    --unsafe-rpc-external \
-    --unsafe-ws-external \
-    --rpc-cors="all" \
-    -- \
-    --port 30334 \
-    --rpc-port 9934 \
-    --ws-port 9945 \
-    --chain ${rchain} \
-    --execution wasm \
-    --name="${rchain}-full-node (Embedded Relay)"
+    if [ $node == "relay&para"]
+    then
+        ./${bname}-bin \
+        --port 30333 \
+        --rpc-port 9933 \
+        --ws-port 9944 \
+        --execution wasm \
+        --wasm-execution compiled \
+        --pruning=archive \
+        --base-path $DATA_DIR \
+        --chain ${chainkey} \
+        --name "${pchain}-full-node" \
+        --unsafe-rpc-external \
+        --unsafe-ws-external \
+        --rpc-cors="all" \
+        -- \
+        --port 30334 \
+        --rpc-port 9934 \
+        --ws-port 9945 \
+        --chain ${rchain} \
+        --execution wasm \
+        --name="${rchain}-full-node (Embedded Relay)"
+    else
+        ./${bname}-bin \
+        --port 30333 \
+        --rpc-port 9933 \
+        --execution wasm \
+        --wasm-execution compiled \
+        --pruning=archive \
+        --base-path $DATA_DIR \
+        --chain ${chainkey} \
+        --name "${pchain}-full-node" \
+        --unsafe-rpc-external \
+        --rpc-cors="all"
+    fi
 }
+
+
+        # ./target/release/watr-node \
+        # --port 30333 \
+        # --rpc-port 9933 \
+        # --ws-port 9944 \
+        # --execution wasm \
+        # --wasm-execution compiled \
+        # --pruning=archive \
+        # --tmp \
+        # --chain ./chain-specs/mainnet-raw.json \
+        # --name "watr-full-node" \
+        # --unsafe-rpc-external \
+        # --unsafe-ws-external \
+        # --rpc-cors="all" \
+        # -- \
+        # --port 30334 \
+        # --rpc-port 9934 \
+        # --ws-port 9945 \
+        # --chain polkadot \
+        # --execution wasm \
+        # --name="polkadot-full-node (Embedded Relay)"
