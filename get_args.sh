@@ -16,26 +16,23 @@ run_argss() {
 
 }
 
-run_args() {
+set_envs() {
   NAME=$1
-  name=""
-  gitlink=""
-  repo_dir=""
-  bname=""
-  rchain="polkadot"
-  pchain=""
 
-  env_file=`cat list.txt`
-  line=$(echo "$env_file" | grep ${NAME})
+  archive_type=$( jq -r .archive_type ./config.json; )
+  work_dir=$( jq -r .work_dir ./config.json; )
+  data_dir=$( jq -r .data_dir ./config.json; )
+  bin_dir=$( jq -r .bin_dir ./config.json; )
 
-  IFS=' '
-  read -ra ADDR <<< "$line"
+  PARACHAIN=$( jq -r .$NAME ./archive_nodes.json; )
+  para_id=$(echo $PARACHAIN | jq -r .para_id)
+  chain_type=$(echo $PARACHAIN | jq -r .chain_type)
+  parachain=$(echo $PARACHAIN | jq -r .parachain)
+  repo=$(echo $PARACHAIN | jq -r .repo)
+  repo_dir=$(echo $PARACHAIN | jq -r .repo_dir)
+  parachain_cmd=$(echo $PARACHAIN | jq -r .cmd)
+  spec_file=$(echo $PARACHAIN | jq -r .spec_file)
+  binary_name=$(echo $PARACHAIN | jq -r .binary_name)
+  chain=$(echo $PARACHAIN | jq -r .chain)
 
-  name=${ADDR[0]}
-  gitlink=${ADDR[1]}
-  repo_dir=${ADDR[2]}
-  bname=${ADDR[3]}
-  pchain=${ADDR[4]}
-  lspec=${ADDR[5]}
-  specf=${ADDR[6]}
 }

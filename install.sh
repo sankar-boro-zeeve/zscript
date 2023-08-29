@@ -12,27 +12,26 @@ install_linux_packages() {
 }
 
 repo_setup() {
-  cd $HOME/zeeve
-  # repo_dir=$(echo $git_link | awk -F/ '{print $NF}' | sed 's/.git$//')
-  if [ -d $HOME/zeeve/$repo_dir ] 
+  cd $work_dir
+  if [ -d $work_dir/$repo_dir ] 
   then
-    echo "Directory $HOME/zeeve/$repo_dir exists." 
+    echo "Directory $work_dir/$repo_dir exists." 
   else
     # Clone the specified Git repository
-    sudo git clone $gitlink --depth 1
+    sudo git clone $repo --depth 1
     # Get the name of the repository directory
     # Change ownership of the repository directory to the current user
-    sudo chown -R $USER:$USER $repo_dir
+    sudo chown -R $USER:$USER $work_dir/$repo_dir
     # Configure Git to recursively clone submodules
-    cd $repo_dir && git config --global submodule.recurse true
+    cd $work_dir/$repo_dir && git config --global submodule.recurse true
     cd ..
   fi
 }
 
 run_init() {
-  if [ -d $HOME/zeeve/$repo_dir/scripts ]
+  if [ -d $work_dir/$repo_dir/$repo_dir/scripts ]
   then
-    if [ -f $HOME/zeeve/$repo_dir/scripts/init.sh ]
+    if [ -f $work_dir/$repo_dir/$repo_dir/scripts/init.sh ]
     then
       chmod u+x ./scripts/init.sh
       ./scripts/init.sh
@@ -43,13 +42,17 @@ run_init() {
 }
 
 copy_bin() {
-  if [ -f $HOME/zeeve/$repo_dir/target/release/$bname ] 
+  cd $work_dir/$repo_dir
+  if [[ -f $work_dir/$repo_dir/target/release/$binary_name ]] 
   then
-    cp ./target/release/$bname ../$bname-bin 
-    echo true
-  elif [ -f $HOME/zeeve/$repo_dir/target/production/$bname ]
+    if ! [[ -f $bin_dir/$binary_name ]]
+    then
+      cp $work_dir/$repo_dir/target/release/$binary_name $bin_dir/$binary_name-bin 
+      echo 'copied'
+    fi
+  elif [[ -f $work_dir/$repo_dir/target/production/$binary_name ]]
   then
-    cp ./target/production/$bname ../$bname-bin 
+    cp $work_dir/$repo_dir/target/production/$binary_name $bin_dir/$binary_name-bin 
     echo true
   else
     echo false
@@ -58,18 +61,6 @@ copy_bin() {
 
 
 build_binary() {
-  build_command="${name}_build"
   cd $repo_dir
-
-  local res=$(copy_bin)
-  
-  if [ $res == true ]
-  then
-    cd ..
-  else
-    # run_init
-    type $build_command &>/dev/null && $build_command || default_build
-    copy_bin
-    cd ..
-  fi
+  $parachain_cmd
 }

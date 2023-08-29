@@ -1,0 +1,38 @@
+{
+  "statemint": {
+    "para_id": 1000,
+    "chain_type": "relay_chain",
+    "parachain_name": "Statemint",
+    "parachain": "statemint",
+    "cmd": "cargo build --release",
+    "repo": "https://github.com/paritytech/cumulus",
+    "repo_dir": "cumulus",
+    "spec_file": null,
+    "binary_name": "polkadot-parachain",
+    "chain": "statemint"
+  },
+  "collectives": {
+    "para_id": 1001,
+    "chain_type": "relay_chain",
+    "parachain_name": "Collectives",
+    "parachain": "collectives",
+    "cmd": "cargo build --release",
+    "repo": "https://github.com/paritytech/cumulus",
+    "repo_dir": "cumulus",
+    "spec_file": null,
+    "binary_name": "polkadot-parachain",
+    "chain": "collectives-polkadot"
+  },
+  "bridgehub": {
+    "para_id": 1002,
+    "chain_type": "relay_chain",
+    "parachain_name": "BridgeHub",
+    "parachain": "bridgehub",
+    "cmd": "cargo build --release",
+    "repo": "https://github.com/paritytech/cumulus",
+    "repo_dir": "cumulus",
+    "spec_file": null,
+    "binary_name": "polkadot-parachain",
+    "chain": "bridge-hub-polkadot"
+  }
+}
