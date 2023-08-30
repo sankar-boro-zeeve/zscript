@@ -30,7 +30,7 @@ set_envs "${@}"
 # # install_rust
 # # install_linux_packages
 repo_setup
-# build_binary
+build_binary
 copy_bin
 run_binary
 
