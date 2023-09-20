@@ -11,6 +11,19 @@ install_linux_packages() {
   sudo apt-get install -y git clang curl libssl-dev llvm libudev-dev protobuf-compiler cmake make libclang-dev build-essential
 }
 
+install_nvm() {
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+source ~/.bashrc
+}
+
+install_nodejs18() {
+  nvm install v18.16.0
+  nvm use v18.16.0
+  npm install --global yarn
+}
+
 repo_setup() {
   cd $work_dir
   if [ -d $work_dir/$repo_dir ] 
