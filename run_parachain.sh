@@ -1,13 +1,15 @@
 #!/bin/bash
 
-source install.sh
+source installations/install.sh
 source git_packages.sh
+source run/parachain.sh
 
-install_rust
-install_linux_packages
-install_nvm
-install_nodejs18
-install_zombienet
+cd $HOME
+# install_rust
+# install_linux_packages
+# install_nvm
+# install_nodejs18
+# install_zombienet
 
 
 run_parachain

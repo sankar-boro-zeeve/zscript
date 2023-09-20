@@ -2,7 +2,7 @@
 
 source help.sh
 source get_args.sh
-source install.sh
+source installations/install.sh
 source run.sh
 
 if [[ $@ == *"-h"* ]]
