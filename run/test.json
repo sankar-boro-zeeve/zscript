@@ -38,7 +38,7 @@
           "register_para": true,
           "onboard_as_parachain": true,
           "collators": [{
-              "name": "genesis-node",
+              "name": "parachain",
               "command": "genesis-node",
               "p2p_port": 30002,
               "rpc_port": 8002,
@@ -46,7 +46,7 @@
               "prometheus_port": 8002,
               "seed": "daughter peasant twelve bless century neglect title mouse habit plate galaxy ticket"
           }],
-          "chain_spec_path": "/home/sankar/files/humidefi/humidefi-2000-defaultkeys-v2-roclocal.json"
+          "chain_spec_path": "parachain.json"
       }
   ],
   "configBasePath": "<config-base-path>",
