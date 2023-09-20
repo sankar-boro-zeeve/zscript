@@ -10,6 +10,7 @@ cd $HOME
 # install_nvm
 # install_nodejs18
 # install_zombienet
+# install_polkadot
 
 
 run_parachain

@@ -77,3 +77,8 @@ build_binary() {
   cd $repo_dir
   $parachain_cmd
 }
+
+install_polkadot() {
+  wget https://github.com/paritytech/polkadot/releases/download/v1.0.0/polkadot
+  ln -s $HOME/polkadot /usr/local/bin
+}
