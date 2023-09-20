@@ -80,5 +80,5 @@ build_binary() {
 
 install_polkadot() {
   wget https://github.com/paritytech/polkadot/releases/download/v1.0.0/polkadot
-  ln -s $HOME/polkadot /usr/local/bin
+  sudo ln -s $HOME/polkadot /usr/local/bin
 }

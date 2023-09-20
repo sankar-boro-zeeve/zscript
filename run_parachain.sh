@@ -1,16 +1,15 @@
 #!/bin/bash
 
 source installations/install.sh
-source git_packages.sh
+source installations/git_packages.sh
 source run/parachain.sh
 
 cd $HOME
-# install_rust
-# install_linux_packages
-# install_nvm
-# install_nodejs18
-# install_zombienet
-# install_polkadot
+install_linux_packages
+install_rust
+install_nvm
+install_nodejs18
+install_polkadot
+install_zombienet
 
-
-run_parachain
+run_zombienet $HOME/zeeve/zscript/examples/parachain.json
