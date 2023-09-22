@@ -12,4 +12,5 @@ source run/parachain.sh
 # install_polkadot
 # install_zombienet
 
-run_zombienet $HOME/zeeve/zscript/examples/parachain-config.json
+get_parachain_chain_spec
+run_zombienet
