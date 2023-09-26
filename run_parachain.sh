@@ -9,11 +9,13 @@ if [ "$#" -ne 3 ]; then
   exit 1
 fi
 
+HOME_DIR=$(pwd)
+
 git_url=$1
 binary_name=$2
 parachain_chain_spec=$3
 
-cd $HOME
+cd $HOME_DIR
 install_linux_packages
 install_rust
 install_nvm

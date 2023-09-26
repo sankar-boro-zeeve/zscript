@@ -5,10 +5,10 @@
 # parachain_chain_spec
 
 install_polkadot() {
-  cd $HOME
+  cd $HOME_DIR
   wget https://github.com/paritytech/polkadot/releases/download/v1.0.0/polkadot
-  sudo chmod 777 $HOME/polkadot
-  sudo ln -s $HOME/polkadot /usr/local/bin
+  sudo chmod 777 $HOME_DIR/polkadot
+  sudo ln -s $HOME_DIR/polkadot /usr/local/bin
 }
 
 install_parachain() {
@@ -19,44 +19,44 @@ install_parachain() {
 build_parachain() {
   cd $repo_dir
   cargo build --release
-  cd $HOME
+  cd $HOME_DIR
 }
 
 link_parachain() {
   cd $repo_dir
-  cp ./target/release/$binary_name $HOME/parachan-bin
-  sudo ln -s $HOME/parachan-bin /usr/local/bin
-  cd $HOME
+  cp ./target/release/$binary_name $HOME_DIR/parachan-bin
+  sudo ln -s $HOME_DIR/parachan-bin /usr/local/bin
+  cd $HOME_DIR
 }
 
 get_parachain_chain_spec() {
     # https://raw.githubusercontent.com/sankar-boro/files/main/parachain/parachain_chain_spec.json
-  curl $parachain_chain_spec -o $HOME/parachain_chain_spec.json
+  curl $parachain_chain_spec -o $HOME_DIR/parachain_chain_spec.json
 }
 
 install_and_build_zombienet() {
-  cd $HOME
+  cd $HOME_DIR
   git clone https://github.com/paritytech/zombienet.git
   cd zombienet/javascript
   yarn install
   yarn build
-  mkdir $HOME/zn
-  cp -r ./packages/cli/dist $HOME/zn
-  cp ./packages/cli/package.json $HOME/zn
-  cd $HOME/zn
+  mkdir $HOME_DIR/zn
+  cp -r ./packages/cli/dist $HOME_DIR/zn
+  cp ./packages/cli/package.json $HOME_DIR/zn
+  cd $HOME_DIR/zn
   yarn install
-  cd $HOME
+  cd $HOME_DIR
 }
 
 get_zombienet_config() {
-  curl https://raw.githubusercontent.com/sankar-boro/files/main/parachain/zombienet-config.json -o $HOME/zombienet-config-raw.json
+  curl https://raw.githubusercontent.com/sankar-boro/files/main/parachain/zombienet-config.json -o $HOME_DIR/zombienet-config-raw.json
 }
 
 update_zombienet_config() {
-  data=$(jq '.parachains[0].collators[0].command = "parachain-bin"' $HOME/zombienet-config-raw.json | jq '.' > $HOME/zombienet-config.json)
+  data=$(jq '.parachains[0].collators[0].command = "parachain-bin"' $HOME_DIR/zombienet-config-raw.json | jq '.' > $HOME_DIR/zombienet-config.json)
 }
 
 run_zombienet_parachain() {
-  cd $HOME/zn
-  node ./dist/cli.js spawn --provider native $HOME/zombienet-config.json
+  cd $HOME_DIR/zn
+  node ./dist/cli.js spawn --provider native $HOME_DIR/zombienet-config.json
 }

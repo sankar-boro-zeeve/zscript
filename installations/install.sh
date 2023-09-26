@@ -3,7 +3,7 @@
 install_rust() {
   # Install Rust using rustup
   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-  source "$HOME/.cargo/env"
+  source "$HOME_DIR/.cargo/env"
 }
 
 install_linux_packages() {
