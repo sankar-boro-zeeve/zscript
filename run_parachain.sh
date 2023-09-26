@@ -24,10 +24,11 @@ install_polkadot
 install_parachain
 build_parachain
 link_parachain
-get_parachain_chain_spec
 
 install_and_build_zombienet
 
 get_zombienet_config
 update_zombienet_config
+
+get_parachain_chain_spec
 run_zombienet_parachain
