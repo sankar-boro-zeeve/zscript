@@ -9,9 +9,9 @@ if [ "$#" -ne 3 ]; then
   exit 1
 fi
 
-$git_url=$1
-$binary_name=$2
-$parachain_chain_spec=$3
+git_url=$1
+binary_name=$2
+parachain_chain_spec=$3
 
 cd $HOME
 install_linux_packages
