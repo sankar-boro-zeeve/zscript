@@ -19,12 +19,14 @@ install_parachain() {
 build_parachain() {
   cd $repo_dir
   cargo build --release
+  cd $HOME
 }
 
 link_parachain() {
   cd $repo_dir
   cp ./target/release/$binary_name $HOME/parachan-bin
   sudo ln -s $HOME/parachan-bin /usr/local/bin
+  cd $HOME
 }
 
 get_parachain_chain_spec() {
@@ -43,6 +45,7 @@ install_and_build_zombienet() {
   cp ./packages/cli/package.json $HOME/zn
   cd $HOME/zn
   yarn install
+  cd $HOME
 }
 
 get_zombienet_config() {
