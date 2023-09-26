@@ -71,20 +71,3 @@ copy_bin() {
     echo false
   fi
 }
-
-
-build_binary() {
-  cd $repo_dir
-  $parachain_cmd
-}
-
-install_polkadot() {
-  cd $HOME
-  wget https://github.com/paritytech/polkadot/releases/download/v1.0.0/polkadot
-  sudo chmod 777 $HOME/polkadot
-  sudo ln -s $HOME/polkadot /usr/local/bin
-}
-
-get_parachain_chain_spec() {
-  curl https://raw.githubusercontent.com/sankar-boro/files/main/parachain/parachain_chain_spec.json -o $HOME/parachain_chain_spec.json
-}

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-run_zombienet() {
+run_parachain() {
   cd $HOME
   curl https://raw.githubusercontent.com/sankar-boro/files/main/parachain/parachain-config.json -o $HOME/raw.json
   data=$(jq '.parachains[0].collators[0].command = "genesis-node"' $HOME/raw.json | jq '.' > $HOME/parachain-config.json)

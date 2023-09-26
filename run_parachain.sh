@@ -2,15 +2,23 @@
 
 source installations/install.sh
 source installations/git_packages.sh
-source run/parachain.sh
+source parachain/index.sh
 
 cd $HOME
 install_linux_packages
 install_rust
 install_nvm
 install_nodejs18
-install_polkadot
-install_zombienet
 
+install_polkadot
+
+install_parachain
+build_parachain
+link_parachain
 get_parachain_chain_spec
-run_zombienet
+
+install_and_build_zombienet
+
+get_zombienet_config
+update_zombienet_config
+run_zombienet_parachain
