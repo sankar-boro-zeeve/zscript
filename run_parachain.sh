@@ -16,10 +16,10 @@ binary_name=$2
 parachain_chain_spec=$3
 
 cd $HOME_DIR
-# install_linux_packages
-# install_rust
-# install_nvm
-# install_nodejs18
+install_linux_packages
+install_rust
+install_nvm
+install_nodejs18
 
 install_polkadot
 
