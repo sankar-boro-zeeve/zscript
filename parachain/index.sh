@@ -3,6 +3,7 @@
 # git_url
 # binary_name
 # parachain_chain_spec
+# zombienet_config
 
 install_polkadot() {
   echo "Installing polkadot..."
@@ -68,7 +69,7 @@ install_and_build_zombienet() {
 
 get_zombienet_config() {
   echo "Get zombienet config..."
-  curl https://raw.githubusercontent.com/sankar-boro/files/main/parachain/zombienet-config.json -o $HOME_DIR/zombienet-config-raw.json
+  curl $zombienet_config -o $HOME_DIR/zombienet-config-raw.json
 }
 
 update_zombienet_config() {

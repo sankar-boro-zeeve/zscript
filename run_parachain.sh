@@ -14,6 +14,7 @@ HOME_DIR=$(pwd)
 git_url=$1
 binary_name=$2
 parachain_chain_spec=$3
+zombienet_config=$4
 
 cd $HOME_DIR
 install_linux_packages
