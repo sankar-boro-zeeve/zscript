@@ -33,10 +33,10 @@ build_parachain() {
 }
 
 link_parachain() {
-  echo "Linking parachain: sudo ln -s $HOME_DIR/parachan-bin /usr/local/bin..."
-  cp $HOME_DIR/$repo_dir/target/release/$binary_name $HOME_DIR/parachan-bin
+  echo "Linking parachain: sudo ln -s $HOME_DIR/parachain-bin /usr/local/bin..."
+  cp $HOME_DIR/$repo_dir/target/release/$binary_name $HOME_DIR/parachain-bin
   sudo chmod 777 $HOME_DIR/parachain-bin
-  sudo ln -s $HOME_DIR/parachan-bin /usr/local/bin
+  sudo ln -s $HOME_DIR/parachain-bin /usr/local/bin
   cd $HOME_DIR
 }
 
