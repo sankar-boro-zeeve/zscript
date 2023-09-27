@@ -34,8 +34,7 @@ build_parachain() {
 
 link_parachain() {
   echo "Linking parachain: sudo ln -s $HOME_DIR/parachan-bin /usr/local/bin..."
-  cd $repo_dir
-  cp ./target/release/$binary_name $HOME_DIR/parachan-bin
+  cp $HOME_DIR/$repo_dir/target/release/$binary_name $HOME_DIR/parachan-bin
   sudo chmod 777 $HOME_DIR/parachain-bin
   sudo ln -s $HOME_DIR/parachan-bin /usr/local/bin
   cd $HOME_DIR
@@ -55,7 +54,7 @@ install_and_build_zombienet() {
   then
     git clone https://github.com/paritytech/zombienet.git
   fi
-  
+
   cd zombienet/javascript
   yarn install
   yarn build
