@@ -4,7 +4,7 @@ source installations/install.sh
 source installations/git_packages.sh
 source parachain/index.sh
 
-if [ "$#" -ne 3 ]; then
+if [ "$#" -ne 4 ]; then
   echo "Usage: ./run_parachain.sh <parachain_git_url> <binary_name> <binary_json_chain_spec>"
   exit 1
 fi
