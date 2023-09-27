@@ -8,7 +8,7 @@ install_rust() {
 
 install_linux_packages() {
   # Install required dependencies
-  sudo apt-get install -y git clang curl openssl libssl-dev llvm libudev-dev protobuf-compiler cmake make libclang-dev build-essential jq
+  sudo apt-get install -y git clang curl openssl pkg-config libssl-dev llvm libudev-dev protobuf-compiler cmake make libclang-dev build-essential jq
 }
 
 install_nvm() {
