@@ -7,12 +7,11 @@
 install_polkadot() {
   echo "Installing polkadot..."
   cd $HOME_DIR
-  if [ -f "$HOME_DIR/polkadot" ]
+  if ! [ -f $HOME_DIR/polkadot ]
   then
     wget https://github.com/paritytech/polkadot/releases/download/v1.0.0/polkadot
     sudo chmod 777 $HOME_DIR/polkadot
     sudo ln -s $HOME_DIR/polkadot /usr/local/bin
-  else
   fi
 }
 
@@ -23,7 +22,6 @@ install_parachain() {
   if ! [ -d "$HOME/$repo_dir" ]
   then
     git clone $git_url
-  else
   fi
 }
 
@@ -52,11 +50,12 @@ get_parachain_chain_spec() {
 install_and_build_zombienet() {
   echo "Installing and building zombienet...."
   cd $HOME_DIR
+
   if ! [ -d "$HOME_DIR/zombienet" ]
   then
     git clone https://github.com/paritytech/zombienet.git
-  else
   fi
+  
   cd zombienet/javascript
   yarn install
   yarn build
