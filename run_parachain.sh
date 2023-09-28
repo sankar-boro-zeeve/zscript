@@ -34,16 +34,16 @@ while getopts "g:b:z:p:" option; do
 HOME_DIR=$HOME
 
 cd $HOME_DIR
-# install_linux_packages
-# install_rust
-# install_nvm
-# install_nodejs18
+install_linux_packages
+install_rust
+install_nvm
+install_nodejs18
 
-# install_polkadot
+install_polkadot
 
-# install_parachain
-# build_parachain
-# link_parachain
+install_parachain
+build_parachain
+link_parachain
 
 install_and_build_zombienet
 
