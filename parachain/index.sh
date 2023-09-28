@@ -44,7 +44,9 @@ link_parachain() {
 get_parachain_chain_spec() {
   echo "Getting parachain chain spec"
   if [ "$parachain_chain_spec" !=  "" ]
-  curl $parachain_chain_spec -o $HOME_DIR/parachain_chain_spec.json
+  then
+    curl $parachain_chain_spec -o $HOME_DIR/parachain_chain_spec.json
+  fi
 }
 
 install_and_build_zombienet() {
