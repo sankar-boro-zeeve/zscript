@@ -43,7 +43,7 @@ link_parachain() {
 
 get_parachain_chain_spec() {
   echo "Getting parachain chain spec"
-    # https://raw.githubusercontent.com/sankar-boro/files/main/parachain/parachain_chain_spec.json
+  if [ "$parachain_chain_spec" !=  "" ]
   curl $parachain_chain_spec -o $HOME_DIR/parachain_chain_spec.json
 }
 

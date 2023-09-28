@@ -4,17 +4,34 @@ source installations/install.sh
 source installations/git_packages.sh
 source parachain/index.sh
 
-if [ "$#" -ne 4 ]; then
-  echo "Usage: ./run_parachain.sh <parachain_git_url> <binary_name> <binary_json_chain_spec>"
-  exit 1
-fi
+# if [ "$#" -ne 4 ]; then
+#   echo "Usage: ./run_parachain.sh <parachain_git_url> <binary_name> <binary_json_chain_spec>"
+#   exit 1
+# fi
 
+parachain_chain_spec=''
+
+while getopts "g:b:z:p:" option; do
+  case $option in
+    g)
+      git_url=$OPTARG
+      ;;
+    b)
+      binary_name=$OPTARG
+      ;;
+    z)
+      zombienet_config=$OPTARG
+      ;;
+    p)
+      parachain_chain_spec=$OPTARG
+      ;;
+    \?) # Invalid option
+      echo "Error: Invalid option"
+      exit;;
+    esac
+  done
+  
 HOME_DIR=$(pwd)
-
-git_url=$1
-binary_name=$2
-parachain_chain_spec=$3
-zombienet_config=$4
 
 cd $HOME_DIR
 install_linux_packages

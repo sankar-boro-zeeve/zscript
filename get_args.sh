@@ -13,7 +13,6 @@ run_argss() {
           exit;;
     esac
   done
-
 }
 
 set_envs() {
