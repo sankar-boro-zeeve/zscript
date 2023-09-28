@@ -9,5 +9,5 @@
 # Run parachain
 
 ```
-./run_parachain.sh https://github.com/moonbeam-foundation/moonbeam moonbeam https://raw.githubusercontent.com/sankar-boro/files/main/parachain/zombienet-config-moonbeam.json
+./run_parachain.sh -g https://github.com/moonbeam-foundation/moonbeam -b moonbeam -z https://raw.githubusercontent.com/sankar-boro/files/main/parachain/zombienet-config-moonbeam.json
 ```
