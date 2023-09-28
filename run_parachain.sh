@@ -31,7 +31,7 @@ while getopts "g:b:z:p:" option; do
     esac
   done
   
-HOME_DIR=$($HOME)
+HOME_DIR=$HOME
 
 cd $HOME_DIR
 install_linux_packages
