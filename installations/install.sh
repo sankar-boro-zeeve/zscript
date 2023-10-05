@@ -55,19 +55,20 @@ run_init() {
 }
 
 copy_bin() {
-  cd $work_dir/$repo_dir
+  echo "repo_dir $work_dir/$repo_dir/target/release/$binary_name"
+
   if [[ -f $work_dir/$repo_dir/target/release/$binary_name ]] 
   then
     if ! [[ -f $bin_dir/$binary_name ]]
     then
-      cp $work_dir/$repo_dir/target/release/$binary_name $bin_dir/$binary_name-bin 
+      sudo cp $work_dir/$repo_dir/target/release/$binary_name $bin_dir/$binary_name-bin 
       echo 'copied'
     fi
   elif [[ -f $work_dir/$repo_dir/target/production/$binary_name ]]
   then
-    cp $work_dir/$repo_dir/target/production/$binary_name $bin_dir/$binary_name-bin 
-    echo true
+    sudo cp $work_dir/$repo_dir/target/production/$binary_name $bin_dir/$binary_name-bin 
+    echo 'copied binary'
   else
-    echo false
+    echo 'no binary to copy'
   fi
 }

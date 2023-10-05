@@ -18,6 +18,17 @@ if [[ $@ == *"-l"* ]]
 fi
 
 set_envs "${@}"
+HOME_DIR=$HOME
+work_dir=$HOME_DIR/zeeve
+archive_type="relay&para"
+data_dir=$HOME_DIR/.data
+bin_dir=$HOME/bin
+
+echo $HOME_DIR
+echo $work_dir
+echo $archive_type
+echo $data_dir
+echo $bin_dir
 # run_argss "${@}"
 
 # Check if a Git repository URL has been provided
@@ -27,16 +38,9 @@ set_envs "${@}"
 # 	exit 1
 # fi
 
-# # install_rust
-# # install_linux_packages
-repo_setup
-build_binary
+# install_rust
+# install_linux_packages
+# repo_setup
+# build_binary
 copy_bin
 run_binary
-
-# ./main.sh -g https://github.com/PureStake/moonbeam -n moonbeam -r polkadot -p moonbeam -u sankar
-
-
-# --state-pruning=archive \
-# --trie-cache-size 0 \
-# --db-cache <ram-in-mb> \

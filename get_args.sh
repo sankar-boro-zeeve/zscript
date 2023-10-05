@@ -17,13 +17,8 @@ run_argss() {
 
 set_envs() {
   NAME=$1
-
-  archive_type=$( jq -r .archive_type ./config.json; )
-  work_dir=$( jq -r .work_dir ./config.json; )
-  data_dir=$( jq -r .data_dir ./config.json; )
-  bin_dir=$( jq -r .bin_dir ./config.json; )
-
   PARACHAIN=$( jq -r .$NAME ./archive_nodes.json; )
+  echo $PARACHAIN
   para_id=$(echo $PARACHAIN | jq -r .para_id)
   chain_type=$(echo $PARACHAIN | jq -r .chain_type)
   parachain=$(echo $PARACHAIN | jq -r .parachain)
@@ -34,4 +29,5 @@ set_envs() {
   binary_name=$(echo $PARACHAIN | jq -r .binary_name)
   chain=$(echo $PARACHAIN | jq -r .chain)
 
+  echo "$repo_dir"
 }

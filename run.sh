@@ -2,7 +2,7 @@
 
 run_binary() {
     
-    if [ $archive_type == "relay&para" ]
+    if [[ $archive_type == "relay&para" ]]
     then
         ${binary_name}-bin \
         --port 30333 \
